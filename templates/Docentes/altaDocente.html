@@ -5,8 +5,11 @@
         <meta charset="utf-8">
     </HEAD>
     <BODY>
+        
         <header>
-            <img src="../Imagenes/logoITESZ.png">
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
         </header>
         <nav>
             Alumnos | Docentes |Actos
@@ -47,6 +50,7 @@
                         <input type="hidden" name="estatus" value="I">
                         <br>
                         <button>Siguiente</button>
+                        <button>Cancelar</button>
                     </fieldset>
                 </div>
                 <div id="datosLabores">
@@ -54,6 +58,54 @@
                         <legend>
                             Datos Laborales
                         </legend>
+                        
+                            <label>Escolaridad:</label>
+                            <select name="escolaridad">
+                                <option>
+                                    --Selecciona la escolaridad--
+                                </option>
+                                <option>
+                                    Licenciatura
+                                </option>
+                                <option>
+                                    Maestría
+                                </option>
+                                <option>
+                                    Doctorado
+                                </option>
+                                <option>
+                                    Post-Doctorado
+                                </option>
+                            </select>
+                            <br>
+                            <label>Especialidad:</label>
+                            <input type="text" name="especialidad" placeholder="Especialidad" maxlength="100" required>
+                            <br>
+                            <label>Cedula:</label>
+                            <input type="text" name="cedula" maxlength="10" placeholder="##########" required>
+                            <br>
+                            <label>Carrera:</label>
+                            <select name="carrera">
+                                <option>
+                                    --Selecciona la carrera--
+                                </option>
+                                <option>
+                                    Ing. en Sistemas Computacionales
+                                </option>
+                                <option>
+                                    Ing. en Tecnologías de la Información
+                                </option>
+                                <option>
+                                    Ing. en Electrónica
+                                </option>
+                                <option>
+                                   Ing. Industrial
+                                </option>
+                            </select>
+                            <br>
+                           <button type="submit">Guardar</button>
+                           <button>Cancelar</button>
+                            
                     </fieldset>
                 </div>
                </from>     
@@ -64,7 +116,8 @@
         </main>
         <footer>
             <hr>
-            Derechos reservados ITESZ 
+            &copy;Derechos reservados ITESZ 
         </footer>
+    
     </BODY>
 </HTML>
