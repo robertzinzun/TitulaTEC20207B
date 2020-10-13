@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Comentarios</title>
+</head>
+<body>
+    <header>
+        <center>
+            <img src="logo-itesz.jpg" />
+            <img src="logo_gob.png" />
+            <img src="logo_educacion.png" />
+            <img src="logo_tecnm.jpg" />
+        </center>
+    </header>
+
+    <fieldset>
+        <legend>Comentarios</legend>
+        <label>IdComentario</label><label>:</label>
+        <input type="text" name="IdComentarios" required maxlength="8" placeholder=" " >
+        <label>IdEvidencia:</label>
+        <input type="text" name=" IdEvidencia" required maxlength="8" placeholder=" ">
+        <label>IdUsuario:</label>
+        <input type="text" name=" IdUsuario" required maxlength="8" placeholder=" ">
+        <br /><br />
+        <label>Observaciones:</label>
+        <select>
+            <option value="0">--Seleccione una opcion--</option>
+            <option value="1">Falta llenar datos</option>
+            <option value="2">Faltan datos</option>
+            <option value="3">Documento erroneo</option>
+            <option value="4">Fuera de la fecha de entrega</option>
+            <option value="5">Otro</option>
+        </select>
+        <label>Fecha:</label>
+        <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+        <input type="submit" name="guardar" value="Guardar" />
+        <button class="btn btn-success">Cancelar</button>
+    </fieldset>
+    <form action="#">
+        <input type="submit" value="Atras" />
+    </form>
+    <footer>
+        <hr>
+        &copy;Derechos reservados ITESZ
+    </footer>
+</body>
+</html>
