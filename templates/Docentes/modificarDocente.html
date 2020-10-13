@@ -16,32 +16,35 @@
         </nav>
         <main>
             <section>
-               <h1>Registro de Docentes</h1>
+               <h1>Edición de Docentes</h1>
                <form action="#" method="POST" enctype="text/plain">
                 <div id="datosPersonales">
                     <fieldset>
                         <legend>
                             Datos Personales
                         </legend>
+                        <label>ID</label>
+                        <input type="number" name="id" value="1" readonly>
+                        <br>
                         <label>Nombre:</label>
-                        <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" required>
+                        <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" value="Roberto Suárez Zinzun" required>
                         <br>
                         <label>Sexo:</label>
                         <!--<select>
                             <option>Femenino</option>
                             <option>Masculino</option>
                         </select>-->
-                        <input type="radio" checked name="sexo">Femenino
-                        <input type="radio" name="sexo">Masculino
+                        <input type="radio"  name="sexo">Femenino
+                        <input type="radio" checked name="sexo">Masculino
                          <br>
                          <label>Telefono:</label>
-                         <input type="tel" name="telefono" placeholder="###-###-####" required>
+                         <input type="tel" name="telefono" placeholder="###-###-####" value="351-190-1781" required>
                          <br>
                          <label>Email:</label>
-                         <input type="email" name="email" placeholder="algo@algo" required>
+                         <input type="email" name="email" value="rsuarez@accitesz.com" placeholder="algo@algo" required>
                         <br>
                         <label>Password:</label>
-                        <input type="password" name="password" required>
+                        <input type="password" name="password" value="Hola123" required>
                         <br>
                         <label>Repite Password:</label>
                         <input type="password" name="rpassword" required>
@@ -58,7 +61,9 @@
                         <legend>
                             Datos Laborales
                         </legend>
-                        
+                        <label>No. de Docente:</label>
+                        <input type="number" name="noDocente" value="10" readonly>
+                        <br>
                             <label>Escolaridad:</label>
                             <select name="escolaridad">
                                 <option>
@@ -67,7 +72,7 @@
                                 <option>
                                     Licenciatura
                                 </option>
-                                <option>
+                                <option selected>
                                     Maestría
                                 </option>
                                 <option>
@@ -79,17 +84,17 @@
                             </select>
                             <br>
                             <label>Especialidad:</label>
-                            <input type="text" name="especialidad" placeholder="Especialidad" maxlength="100" required>
+                            <input type="text" name="especialidad" placeholder="Especialidad" maxlength="100" value="MSI" required>
                             <br>
                             <label>Cedula:</label>
-                            <input type="text" name="cedula" maxlength="10" placeholder="##########" required>
+                            <input type="text" name="cedula" value="123467" maxlength="10" placeholder="##########" required>
                             <br>
                             <label>Carrera:</label>
                             <select name="carrera">
                                 <option>
                                     --Selecciona la carrera--
                                 </option>
-                                <option>
+                                <option selected>
                                     Ing. en Sistemas Computacionales
                                 </option>
                                 <option>
@@ -108,9 +113,9 @@
                             
                     </fieldset>
                 </div>
-               </form>   
-               <a href="consultaDocentes.html">Regresar</a>  
+               </form>     
             </section>
+            <a href="consultaDocentes.html">Regresar</a>  
             <aside>
                 Barra lateral
             </aside>
