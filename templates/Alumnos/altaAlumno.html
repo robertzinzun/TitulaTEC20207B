@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+</head>
+
+<body>
+    <header>
+        INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
+    </header>
+    <nav>
+        <p>Menu</p>
+        <ul>
+            <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
+            <li>Docentes</li>
+            <li>Actos</li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h1>REGISTRO DE ALUMNOS</h1>
+            <form>
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <label>Nombre Completo:</label>
+                        <input type="text" name="nombre" placeholder="Nombre completo" maxlength="100" required>
+                        <br>
+                        <label>Sexo:</label>
+                        <input type="radio" name="sexo" value="F" checked>Fem
+                        <input type="radio" name="sexo" value="M">Mas
+                        <br>
+                        <label>Telefono:</label>
+                        <input type="Tel" name="telefono" placeholder="###-###-###" maxlength="12" required>
+                        <br>
+                        <label>Email:</label>
+                        <input type="email" name="Email" placeholder="algo@algo" maxlength="100" required>
+                        <br>
+                        <label>Contraseña:</label>
+                        <input type="password" name="password" placeholder="password" maxlength="20" required>
+                        <br>
+                        <label>Contraseña de nuevo:</label>
+                        <input type="password" name="Pssdnuevo" placeholder="password" maxlength="20" required>
+                        <br>
+                        <input type="hidden" name="tipo" value="E">
+                        <input type="hidden" name="estatus" value="I">
+                        <button>Siguiente</button>
+                        <button>Cancelar</button>
+                    </fieldset>
+                </div>
+                </div id="datosEscolares">
+                <fieldset>
+                    <legend>Datos Escolares</legend>
+                    <label>No. de Control: </label>
+                    <input type="text" name="nocontrol" required maxlength="8" placeholder="########">
+                    <br>
+                    <label>Año de Egreso:</label>
+                    <input type="number" name="Anhioegreso" min="1994" max="2020" step="1" value="1994" required>
+                    <br>
+                    <label>Creditos acumulados:</label>
+                    <input type="number" name="creditos" min="0" max="260" step="1" value="0" required>
+                    <br>
+                    <label>Carrera:</label>
+                    <select>
+                        <option value="0">--Elige una carrera--</option>
+                        <option value="1">Ing. en Sist. Comput.</option>
+                        <option value="2">Ing. en Tec. de la Inf. y Comunicaciones</option>
+                    </select>
+                    <br>
+                    <button>Atras</button>
+                    <button>Cancelar</button>
+                    <button>Guardar</button>
+                </fieldset>
+                </div>
+            </form>
+            <a href="./ConsultaAlumnos.html">Regresar</a>
+        </section>
+    </main>
+</body>
+
+</html>
