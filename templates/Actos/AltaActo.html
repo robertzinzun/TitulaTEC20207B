@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+        </header>
+        <nav>
+            Alumnos | Docentes |Actos
+        </nav>
+        <main>
+            <section>
+               <h1>Registro de Docentes</h1>
+               <form action="#" method="POST" enctype="text/plain">
+                
+                    <legend>Datos del Acto</legend>
+                           <label>ID Acto:</label>
+                           <input type="number" value="1" name="idActo" required>
+                           <br>
+                           <label>Fecha Registro:</label>
+                           <input type="date" name="FechaRegistro" required> 
+                           <br>
+						   <label>Fecha Presentacion:</label>
+                           <input type="date" name="FechaPresentacion" required> 
+                           <br>
+						   <label>Hora Inicio:</label>
+                           <input type="time" name="HoraInicio" required> 
+                           <br>
+						   <label>Hora Fin:</label>
+                           <input type="time" name="HoraFin" required> 
+                           <br>
+						   <label>Dictamen:</label>
+                           <input type="text"  name="Dictamen"  value="Pendiente" placeholder="Dictamen del acto" maxlength="10" required>
+                           <br>
+						   <label>Estatus:</label>
+                           <input type="text"  name="Estatus" value="Pendiente" placeholder="Estatus del acto" maxlength="1" required>
+                           <br>
+						   <label>ID Sala:</label>
+                           <input type="number" value="1" name="IdSala" required>
+                           <br>
+						   <label>NoDocentePresidente:</label>
+                           <input type="number" value="1" name="NoDocentePresidente" required>
+                           <br>
+						   <label>NoDocenteSecretario:</label>
+                           <input type="number" value="2" name="NoDocenteSecretario" required>
+                           <br>
+						   <label>NoDocenteVocal:</label>
+                           <input type="number" value="3" name="NoDocenteVocal" required>
+                           <br>
+						   <label>ID Solicitud:</label>
+                           <input type="number" value="1" name="IdSsolicitud" required>
+                           <br>
+						   <label>Num Libro:</label>
+                           <input type="number" value="1" name="NumLibro" required>
+                           <br>
+						   <label>Num Foja:</label>
+                           <input type="number" value="1" name="NumFoja" required>
+                           <br>
+						   <button type="submit">Aceptar</button>
+                           <button><a href="./ConsultarActo.html">Regresar</a></button>  
+                    </fieldset>
+               </form>   
+            </section>
+            <aside>
+                Barra lateral
+            </aside>
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>

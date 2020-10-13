@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Alta Administrativos TitulaTEC</title>
+        <meta charset="utf-8">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+        </header>
+        <nav>
+            Alumnos | Docentes | Actos | Administrativos | 
+        </nav>
+        <main>
+            <section>
+               <h1>Registro de Personal Administrativo</h1>
+               <form action="#" method="POST" enctype="text/plain">
+                <div id="datosAdministrativos">
+                    <fieldset>
+                        <legend>
+                            Datos del personal Administrativo
+                        </legend>
+
+                        <input type="hidden" name="noEmpleado" value="1">
+                        <label>Puesto:</label>
+                        <select name="Puesto">
+                            <option>
+                                Contador
+                            </option>
+                            <option>
+                                Auxiliar Contador
+                            </option>
+                            <option>
+                                Vinculacion
+                            </option>
+                        </select>
+                        <br>
+                        <label>idUsuario</label>
+                        <input type="text" placeholder="1" name="idUsuario" maxlength="5" required>
+                        <br>
+                        <input type="hidden" name="estatus" value="A">
+                        <input type="hidden" name="estatus" value="I">
+                        <br>
+                        <button>Siguiente</button>
+                        <button>Cancelar</button>
+                    </fieldset>
+                </div>
+               </from>     
+            </section>
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>
