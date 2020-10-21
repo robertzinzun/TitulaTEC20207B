@@ -3,16 +3,23 @@
     <HEAD>
         <title>TitulaTEC</title>
         <meta charset="utf-8">
+        <link href="../CSS/estilo.css" rel="stylesheet">
     </HEAD>
     <BODY>
         
         <header>
-            <center>
-                <img src="../Imagenes/logoITESZ.png">
-            </center>
+            <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+            <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
+            <img class="ImgHeader" src="../Imagenes/logo_educacion.png" width="100px">
         </header>
         <nav>
-            Alumnos | Docentes |Actos
+            <ul>
+                <li><a href="#"> Alumnos </a></li> 
+                <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                <li><a href="#">Actos </a></li> 
+                <li><a href="#">Aulas </a></li> 
+                <li style="float:right"><a href="#">Edificios </a></li> 
+            </ul>
         </nav>
         <main>
             <section>
@@ -21,8 +28,9 @@
                <input type="text" placeholder="Buscar por nombre" name="nombre">
                <button>Buscar</button>
                <br>
-               <a href="altaDocente.html">Agregar Docente</a> 
-               <table border="1">
+               <br>
+               <a class="linkButton" href="altaDocente.html">Agregar Docente</a> 
+               <table>
                     <thead>
                         <th>Nombre</th>
                         <th>Sexo</th>
@@ -51,13 +59,20 @@
                     </tbody>
                 </table> 
                 <p>Paginas:</p>
-                Anterior <a href="#">1</a> de 7 Siguiente       
+                <p>
+                Anterior <a href="#">1</a> de 7 Siguiente
+                </p> 
+                <br> 
+                <a class="linkButton" href="#">Regresar</a>     
             </section>
-            <a href="#">Refrescar</a>
+            
         </main>
         <footer>
             <hr>
-            &copy;Derechos reservados ITESZ 
+            <img src="../Imagenes/logoACC.png" class="imgFooter">
+            <h1 class="textoFooter">
+                &copy;Derechos reservados ITESZ 
+            </h1>
         </footer>
     
     </BODY>
