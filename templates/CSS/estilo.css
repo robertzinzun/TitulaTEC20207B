@@ -5,15 +5,19 @@ label{
     font-family: Arial, Helvetica, sans-serif;
 }
 #datosPersonales{
-    /*background-color: aliceblue;*/
+    background-color: orange;
 }
 div{
     /*background-color: aqua;*/
     width: 30%;
+    background-image: url("../Imagenes/logo_educacion.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    
 }
 .linkButton{
     background-color:rgb(140, 187, 140);
-    border:1px solid black;
+    border:3px solid black;
     color:black;
     text-decoration: none;
     border-radius: 5px 5px;
@@ -22,6 +26,7 @@ fieldset{
     
     background-color: lightcyan;
     opacity: 0.8;
+    border-radius: 10px 10px;
 }
 button{
     background-color: cadetblue;
@@ -38,9 +43,15 @@ input[type=text],[type=email],[type=number],[type=tel],[type=password]
 select{
     background-color: beige;
     color:red;
+
+}
+select:hover{
+    background-color: blue;
 }
 body{
     background-image: url("../Imagenes/fondo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 header{
     background-color: honeydew;
@@ -48,6 +59,8 @@ header{
     border-radius: 5px 5px;
     margin: 2px;
     height: 100px;
+    position: relative;
+    visibility: visible;
 }
 footer{
     background-color: honeydew;
@@ -161,4 +174,9 @@ p{
     color:rgb(88, 18, 18);
     font-weight: bold;
     font-size: 20px;
+    padding:1px 2px 1px 2px;
+    padding:1px 2px;
+}
+button:hover{
+    background-color: chartreuse;
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TitulaTEC</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
 </head>
 
 <body>
@@ -25,16 +26,28 @@
                 <div id="datosPersonales">
                     <fieldset>
                         <legend>Datos Personales</legend>
+                        <div class="col-sm-4">
+                        <div class="form-group">
                         <label>Nombre Completo:</label>
-                        <input type="text" name="nombre" placeholder="Nombre completo" maxlength="100" required>
+                        <input class="form-control" type="text" name="nombre" placeholder="Nombre completo" maxlength="100" required>
+                        </div> 
+                        </div>   
                         <br>
-                        <label>Sexo:</label>
-                        <input type="radio" name="sexo" value="F" checked>Fem
-                        <input type="radio" name="sexo" value="M">Mas
-                        <br>
-                        <label>Telefono:</label>
-                        <input type="Tel" name="telefono" placeholder="###-###-###" maxlength="12" required>
-                        <br>
+                        <div class="form-check form-check-inline">
+                        <!--<label class="form-check-label">Sexo:</label>-->
+                        <input class="form-check-input" type="radio" name="sexo" value="F" checked>
+                        <label class="form-check-label">Femenino</label>    
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input"  type="radio" name="sexo" value="M">
+                        <label class="form-check-label">Masculino</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label>Telefono:</label>
+                                <input class="form-control" type="Tel" name="telefono" placeholder="###-###-###" maxlength="12" required>
+                            </div>
+                        </div>
                         <label>Email:</label>
                         <input type="email" name="Email" placeholder="algo@algo" maxlength="100" required>
                         <br>
