@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+        <link href="../CSS/estilo.css" rel="stylesheet">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+            <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#"> Alumnos </a></li> 
+                <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                <li><a href="#">Actos </a></li> 
+                <li><a href="#">Aulas </a></li> 
+                <li style="float:right"><a href="#">Edificios </a></li> 
+            </ul>
+        </nav>
+        <main>
+            <section>
+               <h1>Listado de Evidencias</h1>
+               <Label>Buscar:</Label>
+               <input type="text" placeholder="Buscar por nombre" name="nombre">
+               <button>Buscar</button>
+               <br>
+               <br>
+               <a class="linkButton" href="altaEvidencia.html">Agregar Evidencia</a> 
+               <table>
+                    <thead>
+                        <th>idEvidencia</th>
+                        <th>idSolicitud</th>
+                        <th>Nombre</th>
+                        <th>Archivo</th>
+                        <th>estatus</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>E0001</td>
+                            <td>S0001</td>
+                            <td>Evidencia 1</td>
+                            <td>  --   </td>
+                            <td>Activo</td>
+                            <td><a href="modificarEvidencia.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="eliminarEvidencia.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table> 
+                <p>Paginas:</p>
+                <p>
+                Anterior <a href="#">1</a> de 7 Siguiente
+                </p> 
+                <br> 
+                <a class="linkButton" href="../index.html">Regresar</a>     
+            </section>
+            
+        </main>
+        <footer>
+            <hr>
+            <img src="../Imagenes/logoACC.png" class="imgFooter">
+            <h1 class="textoFooter">
+                &copy;Derechos reservados ITESZ 
+            </h1>
+        </footer>
+    
+    </BODY>
+</HTML>
