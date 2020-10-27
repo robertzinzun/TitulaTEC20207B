@@ -48,11 +48,13 @@ select{
 select:hover{
     background-color: blue;
 }
+/*
 body{
     background-image: url("../Imagenes/fondo.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
+*/
 header{
     background-color: honeydew;
     border: 3px solid black;
@@ -118,7 +120,7 @@ legend{
     border: 1px solid black;
     border-radius: 10px 10px;
 }
-ul{
+.miMenu{
     list-style-type: none;
     margin: 0px;
     padding: 12px;
@@ -159,6 +161,7 @@ th{
     width: 150px; 
     text-align: center;
 }
+/*
 td{
     background-color: rgb(207, 207, 199);
     color:black;
@@ -166,7 +169,7 @@ td{
     font-size: medium;
     width: 150px; 
     text-align: center;
-}
+}*/
 h1{
     color:blueviolet;
 }

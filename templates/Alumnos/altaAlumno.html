@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <title>TitulaTEC</title>
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script>
+        var cont=0;
+        function miFuncion(){
+            cont++;
+            alert("Se esta ejecutando una función:"+cont);
+            /*
+            cont="Hola mundo";
+            alert(cont);*/  
+        }
+
+    </script>
+    <script src="../JS/miScript.js"></script>
 </head>
 
 <body>
@@ -12,7 +24,7 @@
         INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA
     </header>
     <nav>
-        <p>Menu</p>
+        <p onclick="alert('Se hizo un click')">Menu</p>
         <ul>
             <li><a href="./Alumnos/ConsultaAlumnos.html">Alumnos</a></li>
             <li>Docentes</li>
@@ -59,7 +71,7 @@
                         <br>
                         <input type="hidden" name="tipo" value="E">
                         <input type="hidden" name="estatus" value="I">
-                        <button>Siguiente</button>
+                        <button onclick="ocultarDivs()">Siguiente</button>
                         <button>Cancelar</button>
                     </fieldset>
                 </div>
@@ -82,13 +94,18 @@
                         <option value="2">Ing. en Tec. de la Inf. y Comunicaciones</option>
                     </select>
                     <br>
-                    <button>Atras</button>
+                    <button onclick="mostrarDatosGenerales()">Datos Generales - Alumno </button>
+                    <button onclick="mostrarCalificaciones()">Calificaciones - Alumno </button>
+                    
                     <button>Cancelar</button>
-                    <button>Guardar</button>
+                    <button onclick="miFuncion()">Guardar</button>
+                    <p>Un parrafo</p>
                 </fieldset>
                 </div>
             </form>
+            
             <a href="./ConsultaAlumnos.html">Regresar</a>
+
         </section>
     </main>
 </body>
