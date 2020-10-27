@@ -51,8 +51,21 @@ function promedioCalificaciones(){
     alert("Promedio "+promedio);
 }
 function califMaxima(){
-
+    indice=0;
+    for(i=0;i<alumno.calificaciones.length;i++){
+        if(alumno.calificaciones[i].calificacion>=alumno.calificaciones[indice].calificacion){
+            indice=i;
+        }
+    }
+    alert("La calificacion maxima es "+alumno.calificaciones[indice].calificacion+" de la materia "+alumno.calificaciones[indice].nombre_materia)
 }
 function califMinima(){
+    indice=0;
+    for(i=0;i<alumno.calificaciones.length;i++){
+        if(alumno.calificaciones[i].calificacion<=alumno.calificaciones[indice].calificacion){
+            indice=i;
+        }
+    }
+    alert("La calificacion minima es "+alumno.calificaciones[indice].calificacion+" de la materia "+alumno.calificaciones[indice].nombre_materia)
 
 }
