@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<HTML>
+    <BODY>
+        <HEAD>
+            <title>TitulaTEC</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="../CSS/estilo.css">
+        </HEAD>
+        <BODY>
+            
+            <header>
+                <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+                <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
+    
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#"> Alumnos </a></li> 
+                    <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                    <li><a href="#">Actos </a></li> 
+                    <li><a href="#">Aulas </a></li> 
+                    <li><a href="#">Edificios </a></li> 
+                </ul>
+            </nav>
+        <main>
+            <section>
+               <h1>Edición de Evidencias</h1>
+               <form action="#" method="POST" enctype="text/plain">
+                <div >
+                    <fieldset>
+                        <legend>
+                          Modificar evidencia
+                        </legend>
+                        <label>ID</label>
+                        <input type="number" name="id" value="1" readonly>
+                        <br>
+                        <label>Nombre:</label>
+                        <input type="text" placeholder="Nombre de la evidenca" name="nombre" maxlength="100" required>
+                        <br>
+                        <label>Archivo:</label>
+                        <input type="file" placeholder="archivo">
+                        <br>
+                        <br>
+                        <button>Siguiente</button>
+                        <button>Cancelar</button>
+                    </fieldset>
+                </div>
+                <br>
+                <br>
+                <a href="consultarEvidencias.html" class="linkButton">Regresar</a>  
+               </form>      
+            </section>
+            
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>
