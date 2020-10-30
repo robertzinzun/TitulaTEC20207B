@@ -9,8 +9,9 @@
                 color:red;
             }
         </style>
+        <script src="../JS/docentes.js"></script>
     </HEAD>
-    <BODY>
+    <BODY onload="mostrarYOcultarDiv('datosPersonales')">
         
         <header>
             <!--
@@ -52,10 +53,10 @@
                         <input type="radio" name="sexo">Masculino
                          <br>
                          <label>Telefono:</label>
-                         <input type="tel" name="telefono" placeholder="###-###-####" required>
+                         <input type="tel" name="telefono" placeholder="###-###-####" id="telefono" required>
                          <br>
                          <label>Email:</label>
-                         <input type="email" name="email" placeholder="algo@algo" required>
+                         <input type="email" name="email" id="email" placeholder="algo@algo" required>
                         <br>
                         <label>Password:</label>
                         <input type="password" name="password" required>
@@ -66,7 +67,7 @@
                         <input type="hidden" name="tipo" value="D">
                         <input type="hidden" name="estatus" value="I">
                         <br>
-                        <button>Siguiente</button>
+                        <button onclick="mostrarYOcultarDiv('datosLabores')">Siguiente</button>
                         <button>Cancelar</button>
                     </fieldset>
                 </div>
@@ -120,8 +121,13 @@
                                 </option>
                             </select>
                             <br>
+                            <div id="notificaciones">
+
+                            </div>
+                           <button onclick="mostrarYOcultarDiv('datosPersonales')">Atras</button>
                            <button type="submit">Guardar</button>
                            <button>Cancelar</button>
+                           <button onclick="validar()">Evaluar Telefono</button>
                             
                     </fieldset>
                 </div>

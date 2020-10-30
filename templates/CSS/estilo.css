@@ -4,17 +4,16 @@ label{
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
 }
-#datosPersonales{
-    background-color: orange;
-}
+/*
 div{
-    /*background-color: aqua;*/
+    /*background-color: aqua;
+    
     width: 30%;
     background-image: url("../Imagenes/logo_educacion.png");
     background-size: 200px;
     background-repeat: no-repeat;
     
-}
+}*/
 .linkButton{
     background-color:rgb(140, 187, 140);
     border:3px solid black;
@@ -23,7 +22,7 @@ div{
     border-radius: 5px 5px;
 }
 fieldset{
-    
+    width: 30%;
     background-color: lightcyan;
     opacity: 0.8;
     border-radius: 10px 10px;
@@ -146,8 +145,10 @@ li a:hover{
     padding: 12px;
 }
 nav{
+    background-color: azure;
     margin: 0px;
     margin: 0px;
+    padding: 10px;
 }
 table,tr,th,td{
     border: 2px solid black;
