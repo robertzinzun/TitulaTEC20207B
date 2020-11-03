@@ -35,7 +35,7 @@
         <main>
             <section>
                <h1>Registro de Docentes</h1>
-               <form action="#" method="POST" enctype="text/plain">
+               <form action="#" method="POST" enctype="text/plain" onsubmit="return validar(this);">
                 <div id="datosPersonales">
                     <fieldset>
                         <legend>
@@ -53,10 +53,10 @@
                         <input type="radio" name="sexo">Masculino
                          <br>
                          <label>Telefono:</label>
-                         <input type="tel" name="telefono" placeholder="###-###-####" id="telefono" required>
+                         <input type="tel" name="telefono" placeholder="###-###-####" required>
                          <br>
                          <label>Email:</label>
-                         <input type="email" name="email" id="email" placeholder="algo@algo" required>
+                         <input type="email" name="email"  placeholder="algo@algo" required>
                         <br>
                         <label>Password:</label>
                         <input type="password" name="password" required>
@@ -104,19 +104,19 @@
                             <br>
                             <label>Carrera:</label>
                             <select name="carrera">
-                                <option>
+                                <option value="0">
                                     --Selecciona la carrera--
                                 </option>
-                                <option>
+                                <option value="1">
                                     Ing. en Sistemas Computacionales
                                 </option>
-                                <option>
+                                <option value="2">
                                     Ing. en Tecnologías de la Información
                                 </option>
-                                <option>
+                                <option value="3">
                                     Ing. en Electrónica
                                 </option>
-                                <option>
+                                <option value="4">
                                    Ing. Industrial
                                 </option>
                             </select>
@@ -127,8 +127,6 @@
                            <button onclick="mostrarYOcultarDiv('datosPersonales')">Atras</button>
                            <button type="submit">Guardar</button>
                            <button>Cancelar</button>
-                           <button onclick="validar()">Evaluar Telefono</button>
-                            
                     </fieldset>
                 </div>
                </form>   
