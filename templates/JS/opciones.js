@@ -1,70 +1,55 @@
 var arrayOpciones=[];
-function Opcion(id,nombre,descripcion){
+class Opcion{
+    constructor(id,nombre,descripcion){    
     this.id=id;
     this.nombre=nombre;
-    this.descripcion=this.descripcion;
-    this.getId=function(){
+    this.descripcion=descripcion;
+    }
+    getId(){
         return this.id;
-    };
-    this.getNombre=function(){
+    }
+    getNombre(){
         return this.nombre;
-    };
-    this.getDescripcion=function(){
+    }
+    getDescripcion(){
         return this.descripcion;
-    };
-    this.setId=function(id){
+    }
+    setId(){
         this.id=id;
-    };
-    this.setNombre=function(nombre){
+    }
+    setNombre(nombre){
         this.nombre=nombre;
-    };
-    this.setId=function(descripcion){
+    }
+    setDescripcion(descripcion){
         this.descripcion=descripcion;
-    };
-    this.guardar=function(){
+    }
+    guardar(){
         //Almacenara el objeto en un arreglo
         arrayOpciones.push(this);
-    };
-    this.actualizar=function(){
+    }
+    actualizar(){
         //Actualizar algunas propiedad del objeto en un arreglo
         for(i=0;i<arrayOpciones.length;i++){
             if(arrayOpciones[i].id==this.id){
                 arrayOpciones[i]=this;
             }
         }
-    };
-    this.eliminar=function(){
+    }
+    eliminar(){
         //Elimina el objeto del arreglo
         for(i=0;i<arrayOpciones.length;i++){
             if(arrayOpciones[i].id==this.id){
                 delete arrayOpciones[i];
             }
         }
-    };
-    this.consultar=function(){
+    }
+    consultar(){
         //Consultar un objecto en el arreglo
         for(i=0;i<arrayOpciones.length;i++){
             if(this.id==arrayOpciones[i].id){
-                alert(this.nombre);
+                return arrayOpciones[i];
             }
         }
     }
 }
 
-function realizarOperacion(op){
-    var obj=new Opcion(1,"Tesis","Presentación de un informe de tesis");
-    switch(op){
-        case "c":
-            obj.guardar();
-            break;
-        case "r":
-            obj.consultar();
-            break;
-        case "u":
-            obj.actualizar();        
-            break;
-        case "d":
-            obj.eliminar();
-            break;
-    } 
-}

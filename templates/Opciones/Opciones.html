@@ -1,14 +1,20 @@
 <html>
     <head>
         <title>CRUD de Opciones</title>
+        <script src="../JS/opciones.js"></script>
+        <script src="../JS/opcionesGUI.js"></script>
     </head>
-    <body>
+    <body onload="inicializarDivs()">
         <div id="listadoGeneral">
-            <table>
+            <table id="datos" border="1">
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </table>
+            <br>
+            <button onclick="nuevo()">Nuevo</button>
         </div>
         <div id="listadoIndividual">
             <div id="titulo"></div>
@@ -21,18 +27,18 @@
             <label>Descripción:</label>
             <input type="text" name="descripcion" id="descripcion" required>
             <br>
+            <button onclick="realizarOperacion()">Guardar</button>
+            <button id="eliminar">Eliminar</button>
+            <button onclick="inicializarDivs()">Cancelar</button>
+            <br>
         </div>
         <div id="notificaciones">
         </div>
-        <div id="acciones">
-            <button>Nuevo</button>
-            <button>Guardar</button>
-            <br>
-            <button>Actualizar</button>
-            <button>Eliminar</button>
-            <br>
-            <button>Consulta General</button>
-            <button>Consulta Individual</button>
-        </div>
+        
+            
+            
+
+            
+        
     </body>
 </html>
