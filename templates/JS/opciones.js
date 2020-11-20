@@ -39,7 +39,8 @@ class Opcion{
         //Elimina el objeto del arreglo
         for(i=0;i<arrayOpciones.length;i++){
             if(arrayOpciones[i].id==this.id){
-                delete arrayOpciones[i];
+                //delete arrayOpciones[i];
+                arrayOpciones.splice(i,1);
             }
         }
     }

@@ -14,9 +14,11 @@ function nuevo(){
     op="c";
     ocultarDiv("listadoGeneral");
     document.getElementById("titulo").innerHTML="<h1>Registro de Opciones</h1>";
+    reset();
     mostrarDiv("listadoIndividual");
     document.getElementById("notificaciones").innerHTML="";
     document.getElementById("eliminar").style.display="none";
+    document.getElementById("guardar").style.display="block";
 }
 function realizarOperacion(){
     var obj;
@@ -43,14 +45,22 @@ function realizarOperacion(){
             inicializarDivs();
             break;
         case "d":
-            obj.eliminar();
+            obj=new Opcion(document.getElementById("id").value,
+                document.getElementById("nombre").value,
+                document.getElementById("descripcion").value,
+            );
+            if(confirm('¿Estas seguro de eliminar la opcion:'+obj.getNombre())){
+                obj.eliminar();   
+                document.getElementById("notificaciones").innerHTML="Opción eliminada con exito";     
+                inicializarDivs();
+            }
             break;
     } 
 }
 function consultaGeneral(){
+    limpiarTabla();
     if(arrayOpciones.length!=0){
         document.getElementById("notificaciones").innerHTML="";
-        limpiarTabla();
         var table=document.getElementById("datos");
         for(i=0;i<arrayOpciones.length;i++){
             var tr=document.createElement("tr");
@@ -70,7 +80,6 @@ function consultaGeneral(){
             td=document.createElement("td");
             td.appendChild(link);
             tr.appendChild(td);
-            
         }
     }
     else{
@@ -103,4 +112,25 @@ function editar(id){
     mostrarDiv("listadoIndividual");
     document.getElementById("id").setAttribute("readonly",true);
     document.getElementById("eliminar").style.display="none";
+    document.getElementById("guardar").style.display="block";
+}
+function eliminar(id){
+    op="d";
+    var o=new Opcion(id,"","");
+    o=o.consultar();
+    document.getElementById("id").value=o.getId();
+    document.getElementById("nombre").value=o.getNombre();
+    document.getElementById("descripcion").value=o.getDescripcion();
+    ocultarDiv("listadoGeneral");
+    document.getElementById("titulo").innerHTML="<h1>Eliminación de Opciones</h1>";
+    document.getElementById("id").setAttribute("readonly",true);
+    mostrarDiv("listadoIndividual");
+    document.getElementById("guardar").style.display="none";
+    document.getElementById("eliminar").style.display="block";
+}
+function reset(){
+    document.getElementById("id").value="";
+    document.getElementById("nombre").value="";
+    document.getElementById("descripcion").value="";
+    document.getElementById("id").removeAttribute("readonly");
 }
