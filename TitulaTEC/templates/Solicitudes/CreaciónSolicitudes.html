@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Crear Solicitud</title>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li><a href="CreaciónSolicitudes.html">Crear Solicitud</a></li>
+				<li><a href="ModificarSolicitudes.html">Modificar Solicitudes</a></li>
+				<li><a href="Modificacionsolicitudes.html">Consultar Solicitudes</a></li>
+				<li><a href="EliminaciónSolicitudes.html">Eliminar Solicitudes</a></li>
+			<ul>				
+		</div>
+
+
+		<h1>Crear Solicitud</h1>
+
+		<form action="" method="post">
+			<label for="name">Fecha de registro:</label>
+			<input type="date" id="FRegistro" name="FRegistro" required>
+			<br>
+			<br>
+	 		<label for="name">Fecha de atención:</label>
+			<input type="date" id="FAtención" name="FAtención" required>
+			<br>
+			<br>
+			<label for="name">Titulo Proyecto:</label>
+			<input type="text" id="TProyecto" name="TProyecto" maxlength="200" required>
+			<br>
+			<br>
+			<label for="status">Estado:</label>
+			<select name="status" id="estados" required>
+				<option value="Aprobado">Aprobado</option>
+				<option value="Rechazado">Rechazado</option>
+				<option value="Pendiente">Pendiente</option>
+			</select>
+			<br>
+			<br>
+			<label for="name">Numero de control:</label>
+			<input type="text" id="NControl" name="NControl" maxlength="8" required>
+			<input type="button" name="btn_checkNControl" value="Comprobar">
+                        <br>
+                        <br>
+			<label for="status">ID Opción:</label>
+                        <select name="status" id="Opciones" required>
+                                <option value="Aprobado">1</option>
+                                <option value="Rechazado">2</option>
+                                <option value="Pendiente">3</option>
+				<option value="Pendiente">4</option>
+				<option value="Pendiente">5</option>	
+				<option value="Pendiente">6</option>
+                        </select>
+                        <br>
+                        <br>
+                        <label for="name">Numero de Empleado:</label>
+                        <input type="text" id="NEmpleado" name="NEmpleado" required>
+			<input type="button" name="btn_checkEmpleado" value="Comprobar">
+		</form>
+		<br>
+		<br>
+		<input type="button" name="btn_registrar" value="Registrar">
+	</body>
+</html>

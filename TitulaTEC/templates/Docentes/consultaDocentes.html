@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+        <link href="../CSS/estilo.css" rel="stylesheet">
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+            <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
+            <img class="ImgHeader" src="../Imagenes/logo_educacion.png" width="100px">
+        </header>
+        <nav>
+            <ul class="miMenu">
+                <li><a href="#"> Alumnos </a></li> 
+                <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                <li><a href="#">Actos </a></li> 
+                <li><a href="#">Aulas </a></li> 
+                <li style="float:right"><a href="#">Edificios </a></li> 
+            </ul>
+        </nav>
+        <main>
+            <section>
+               <h1>Listado de Docentes</h1>
+               <div class="text-center">
+               <img src="../Imagenes/fondo.jpg" class="rounded-circle" width="100px">
+               <br>
+               <Label>Buscar:</Label>
+               <input type="text" placeholder="Buscar por nombre" name="nombre">
+               <button>Buscar</button>
+               <br>
+               <br>
+               <a class="linkButton" href="altaDocente.html">Agregar Docente</a> 
+               <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Sexo</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Carrera</th>
+                        <th scope="col">Especialidad</th>
+                        <th scope="col">Escolaridad</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roberto Suárez Zinzún</td>
+                            <td>Masculino</td>
+                            <td>351-190-1781</td>
+                            <td>rsuarez@accitesz.com</td>
+                            <td>Ing. En Sistemas</td>
+                            <td>MIS</td>
+                            <td>Maestría</td>
+                            <td>123467</td>
+                            <td><a href="modificarDocente.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="eliminarDocente.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Alberto Suárez Zinzún</td>
+                            <td>Masculino</td>
+                            <td>351-190-1781</td>
+                            <td>rsuarez@accitesz.com</td>
+                            <td>Ing. En Sistemas</td>
+                            <td>MIS</td>
+                            <td>Maestría</td>
+                            <td>123467</td>
+                            <td><a href="modificarDocente.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="eliminarDocente.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Antonio
+                                 Suárez Zinzún</td>
+                            <td>Masculino</td>
+                            <td>351-190-1781</td>
+                            <td>rsuarez@accitesz.com</td>
+                            <td>Ing. En Sistemas</td>
+                            <td>MIS</td>
+                            <td>Maestría</td>
+                            <td>123467</td>
+                            <td><a href="modificarDocente.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="eliminarDocente.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#">Anterior</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul> 
+                </nav>
+                <a class="linkButton" href="#">Regresar</a>     
+            </section>
+            
+        </main>
+        <footer>
+            <hr>
+            <img src="../Imagenes/logoACC.png" class="imgFooter">
+            <h1 class="textoFooter">
+                &copy;Derechos reservados ITESZ 
+            </h1>
+        </footer>
+    
+    </BODY>
+</HTML>

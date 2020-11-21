@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>Lista de salas</title>
+        <meta charset="utf-8">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+        </header>
+        <main>
+            <section>
+               <h1>Listado de Sala</h1>
+               <Label>Buscar:</Label>
+               <input type="text" placeholder="Buscar por idSala" name="IdSala">
+               <button type="submit">Buscar</button>
+               <br/>
+			   
+               <table border="1">
+                    <thead>
+                        <th>Id Sala</th>
+                        <th>Nombre de la sala</th>
+                        <th>Id Edificio</th>
+						<th>Editar</th>
+						<th>Eliminar</th>
+                    </thead>
+					<button><a href="AltaSala.html">Agregar Sala</a></button>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>salaA</td>
+                            <td>1</td>
+                            <td><a href="ModificarSala.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="EliminarSala.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </section>
+			<table>
+				<tr><th>Página</th></tr>
+				<tr><td><a href="#">Anterior</a></td><td><a href="#">1</a></td><td>de</td><td><a href="#">7</a></td> <td><a href="#">Siguiente</a></td></tr>
+			</table> 
+            <button><a href="#">Refrescar</a></button>
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>

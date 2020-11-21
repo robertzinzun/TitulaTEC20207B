@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/estilo.css">
+        <script src="../JS/docentes.js"></script>
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+        </header>
+        <nav>
+            Alumnos | Docentes |Actos
+        </nav>
+        <main>
+            <section>
+               <h1>Edición de Docentes</h1>
+               <form action="#" method="POST" enctype="text/plain" onsubmit="return validar(this)">
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>
+                            Datos Personales
+                        </legend>
+                        <label>ID</label>
+                        <input type="number" name="id" value="1" readonly>
+                        <br>
+                        <label>Nombre:</label>
+                        <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" value="Roberto Suárez Zinzun" required>
+                        <br>
+                        <label>Sexo:</label>
+                        <input type="radio"  name="sexo">Femenino
+                        <input type="radio" checked name="sexo">Masculino
+                         <br>
+                         <label>Telefono:</label>
+                         <input type="tel" name="telefono" placeholder="###-###-####" value="351-190-1781" required>
+                         <br>
+                         <label>Email:</label>
+                         <input type="email" name="email" value="rsuarez@accitesz.com" placeholder="algo@algo" required>
+                        <br>
+                        <label>Password:</label>
+                        <input type="password" name="password" value="Hola123" required>
+                        <br>
+                        <label>Repite Password:</label>
+                        <input type="password" name="rpassword" required>
+                        <br>
+                        <input type="hidden" name="tipo" value="D">
+                        <input type="hidden" name="estatus" value="I">
+                        <br>
+                        <button>Siguiente</button>
+                        <button>Cancelar</button>
+                    </fieldset>
+                </div>
+                <div id="datosLabores">
+                    <fieldset>
+                        <legend>
+                            Datos Laborales
+                        </legend>
+                        <label>No. de Docente:</label>
+                        <input type="number" name="noDocente" value="10" readonly>
+                        <br>
+                            <label>Escolaridad:</label>
+                            <select name="escolaridad">
+                                <option>
+                                    --Selecciona la escolaridad--
+                                </option>
+                                <option>
+                                    Licenciatura
+                                </option>
+                                <option selected>
+                                    Maestría
+                                </option>
+                                <option>
+                                    Doctorado
+                                </option>
+                                <option>
+                                    Post-Doctorado
+                                </option>
+                            </select>
+                            <br>
+                            <label>Especialidad:</label>
+                            <input type="text" name="especialidad" placeholder="Especialidad" maxlength="100" value="MSI" required>
+                            <br>
+                            <label>Cedula:</label>
+                            <input type="text" name="cedula" value="123467" maxlength="10" placeholder="##########" required>
+                            <br>
+                            <label>Carrera:</label>
+                            <select name="carrera">
+                                <option value="0">
+                                    --Selecciona la carrera--
+                                </option>
+                                <option selected value="1">
+                                    Ing. en Sistemas Computacionales
+                                </option>
+                                <option value="2">
+                                    Ing. en Tecnologías de la Información
+                                </option>
+                                <option value="3">
+                                    Ing. en Electrónica
+                                </option>
+                                <option value="4">
+                                   Ing. Industrial
+                                </option>
+                            </select>
+                            <br>
+                           <div id="notificaciones"> 
+
+                           </div>
+                           <button type="submit">Guardar</button>
+                           <button>Cancelar</button>
+                            
+                    </fieldset>
+                </div>
+               </form>     
+            </section>
+            <a href="consultaDocentes.html" class="linkButton">Regresar</a>  
+            <aside>
+                Barra lateral
+            </aside>
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>

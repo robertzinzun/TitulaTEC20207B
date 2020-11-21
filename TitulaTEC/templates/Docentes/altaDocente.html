@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../CSS/estilo.css">
+        <style>
+            h1{
+                color:red;
+            }
+        </style>
+        <script src="../JS/docentes.js"></script>
+    </HEAD>
+    <BODY onload="mostrarYOcultarDiv('datosPersonales')">
+        
+        <header>
+            <!--
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+            -->
+            <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+            <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
+            <img class="ImgHeader" src="../Imagenes/logo_educacion.png" width="100px">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#"> Alumnos </a></li> 
+                <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                <li><a href="#">Actos </a></li> 
+                <li><a href="#">Aulas </a></li> 
+                <li style="float:right"><a href="#">Edificios </a></li> 
+            </ul>
+        </nav>
+        <main>
+            <section>
+               <h1>Registro de Docentes</h1>
+               <form action="#" method="POST" enctype="text/plain" onsubmit="return validar(this);">
+                <div id="datosPersonales">
+                    <fieldset>
+                        <legend>
+                            Datos Personales
+                        </legend>
+                        <label>Nombre:</label>
+                        <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" required>
+                        <br>
+                        <label>Sexo:</label>
+                        <!--<select>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                        </select>-->
+                        <input type="radio" checked name="sexo">Femenino
+                        <input type="radio" name="sexo">Masculino
+                         <br>
+                         <label>Telefono:</label>
+                         <input type="tel" name="telefono" placeholder="###-###-####" required>
+                         <br>
+                         <label>Email:</label>
+                         <input type="email" name="email"  placeholder="algo@algo" required>
+                        <br>
+                        <label>Password:</label>
+                        <input type="password" name="password" required>
+                        <br>
+                        <label>Repite Password:</label>
+                        <input type="password" name="rpassword" required>
+                        <br>
+                        <input type="hidden" name="tipo" value="D">
+                        <input type="hidden" name="estatus" value="I">
+                        <br>
+                        <button onclick="mostrarYOcultarDiv('datosLabores')">Siguiente</button>
+                        <button>Cancelar</button>
+                    </fieldset>
+                </div>
+                <div id="datosLabores">
+                    <fieldset>
+                        <legend>
+                            Datos Laborales
+                        </legend>
+                        
+                            <label>Escolaridad:</label>
+                            <select name="escolaridad">
+                                <option>
+                                    --Selecciona la escolaridad--
+                                </option>
+                                <option>
+                                    Licenciatura
+                                </option>
+                                <option>
+                                    Maestría
+                                </option>
+                                <option>
+                                    Doctorado
+                                </option>
+                                <option>
+                                    Post-Doctorado
+                                </option>
+                            </select>
+                            <br>
+                            <label>Especialidad:</label>
+                            <input type="text" name="especialidad" placeholder="Especialidad" maxlength="100" required>
+                            <br>
+                            <label>Cedula:</label>
+                            <input type="text" name="cedula" maxlength="10" placeholder="##########" required value="{{msg}}">
+                            <br>
+                            <label>Carrera:</label>
+                            <select name="carrera">
+                                <option value="0">
+                                    --Selecciona la carrera--
+                                </option>
+                                <option value="1">
+                                    Ing. en Sistemas Computacionales
+                                </option>
+                                <option value="2">
+                                    Ing. en Tecnologías de la Información
+                                </option>
+                                <option value="3">
+                                    Ing. en Electrónica
+                                </option>
+                                <option value="4">
+                                   Ing. Industrial
+                                </option>
+                            </select>
+                            <br>
+                            <div id="notificaciones">
+
+                            </div>
+                           <button onclick="mostrarYOcultarDiv('datosPersonales')">Atras</button>
+                           <button type="submit">Guardar</button>
+                           <button>Cancelar</button>
+                    </fieldset>
+                </div>
+               </form>
+                <p>{{msg}}</p>
+              <a href="consultaDocentes.html" class="linkButton">Regresar</a>  
+              <a href="eliminarDocente.html" class="linkButton">Eliminar</a>
+            </section>
+            <aside>
+                Barra lateral
+            </aside>
+        </main>
+        <footer>
+            <hr>
+            <img src="../Imagenes/logoACC.png" class="imgFooter">
+            <h1 class="textoFooter">
+                &copy;Derechos reservados ITESZ 
+            </h1>
+        </footer>
+    
+    </BODY>
+</HTML>

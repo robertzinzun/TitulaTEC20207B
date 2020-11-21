@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <title>TitulaTEC</title>
+        <meta charset="utf-8">
+    </HEAD>
+    <BODY>
+        
+        <header>
+            <center>
+                <img src="../Imagenes/logoITESZ.png">
+            </center>
+        </header>
+        <main>
+            <section>
+               <h1>Listado de Actos</h1>
+               <Label>Buscar:</Label>
+               <input type="text" placeholder="Buscar por idActo" name="IdActo">
+               <button type="submit">Buscar</button>
+               <br>
+			   <button><a href="AltaActo.html">Agregar Acto</a></button>
+               <table border="1">
+                    <thead>
+                        <th>Id Acto</th>
+                        <th>Fecha Registro</th>
+                        <th>Fecha Presentacion</th>
+                        <th>Hora Inicio</th>
+                        <th>Hora Fin</th>
+                        <th>Dictamen</th>
+                        <th>Estatus</th>
+                        <th>Id Sala</th>
+                        <th>NoDocentePresidente</th>
+						<th>NoDocenteSecretario</th>
+						<th>NoDocenteVocal</th>
+						<th>Id Solicitud</th>
+						<th>Num Libro</th>
+						<th>Num Foja</th>
+						<th>Editar</th>
+						<th>Eliminar</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>15/1/2020</td>
+                            <td>25/1/2020</td>
+                            <td>09:00:00</td>
+                            <td>12:00:00</td>
+                            <td>Pendiente</td>
+                            <td>Pendiente</td>
+                            <td>1</td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>1</td>
+							<td>1</td>
+							<td>1</td>
+                            <td><a href="ModificarActo.html"><img src="../Imagenes/editar.png"></a></td>
+                            <td><a href="EliminarActo.html"><img src="../Imagenes/eliminar.png"></a></td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </section>
+			<table>
+				<tr><th>Página</th></tr>
+				<tr><td><a href="#">Anterior</a></td><td><a href="#">1</a></td><td>de</td><td><a href="#">7</a></td> <td><a href="#">Siguiente</a></td></tr>
+			</table> 
+            <button><a href="#">Refrescar</a></button>
+        </main>
+        <footer>
+            <hr>
+            &copy;Derechos reservados ITESZ 
+        </footer>
+    
+    </BODY>
+</HTML>
