@@ -18,30 +18,20 @@
             <th>Año Egreso:</th>
             <th>Editar:</th>
             <th>Eliminar:</th>
+            {% for a in alumnos %}
             <tr>
-                <td>16010318</td>
-                <td>Cesar Ismael Hernandez Viera</td>
-                <td> M</td>
-                <td>chernandez318@accitesz.com</td>
-                <td>351-181-40-23</td>
-                <td>Ing. Sistemas Computacionales</td>
-                <td>437</td>
-                <td>2020</td>
+                <td>{{a.nocontrol}}</td>
+                <td>{{a.usuario.nombre}}</td>
+                <td>{{a.usuario.sexo}}</td>
+                <td>{{a.usuario.email}}</td>
+                <td>{{a.usuario.telefono}}</td>
+                <td>{{a.carrera.nombre}}</td>
+                <td>{{a.creditos}}</td>
+                <td>{{a.anioEgreso}}</td>
                 <td><a href="editarAlumno.html"><img src="../Imagenes/Editar.jpg"></a></td>
                 <td><a href="eliminarAlumno.html"><img src="../Imagenes/Eliminar.jpg"></a></td>
             </tr>
-            <tr>
-                <td>16010320</td>
-                <td>Alexa Rivera Loredo</td>
-                <td> F</td>
-                <td>arivera318@accitesz.com</td>
-                <td>351-162-63-21</td>
-                <td>Ing. Sistemas Computacionales</td>
-                <td>453</td>
-                <td>2020</td>
-                <td><a href="editarAlumno.html"><img src="../Imagenes/Editar.jpg"></a></td>
-                <td><a href="eliminarAlumno.html"><img src="../Imagenes/Eliminar.jpg"></a></td>
-            </tr>
+            {% endfor %}
         </table>
     </body>
     <a href="../principal.html">Regresar</a>

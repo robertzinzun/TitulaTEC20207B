@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+    <script src="{{url_for('static',filename='JS/global.js')}}"></script>
+</head>
+<body>
+    <h1>Registro de Edificios</h1>
+    <form action="/edificios/save" method="post">
+        <label>Nombre:</label>
+        <input type="text" required name="nombre" maxlength="50" required>
+        <br>
+        <input type="submit" value="Guardar">
+        <input type="button" onclick="regresar('edificios')" value="Cancelar">
+    </form>
+</body>
+</html>

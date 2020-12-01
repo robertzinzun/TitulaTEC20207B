@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+    <script src="{{url_for('static',filename='JS/global.js')}}"></script>
+</head>
+<body>
+    <h1>Listado de Edificios</h1>
+    <a href="/edificios/new"><img src="{{url_for('static',filename='Imagenes/add.gif')}}">Agregar edificio</a>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </thead>
+        {% for e in edificios %}
+            <tr>
+                <td>{{e.idEdificio}}</td>
+                <td>{{e.nombre}}</td>
+                <td><a href="/edificios/{{e.idEdificio}}"><img src="{{url_for('static',filename='Imagenes/Editar.png')}}"></a></td>
+                <td><a href="javascript:eliminarEdificio({{e.idEdificio}},'{{e.nombre}}')"><img src="{{url_for('static',filename='Imagenes/Eliminar.png')}}"></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

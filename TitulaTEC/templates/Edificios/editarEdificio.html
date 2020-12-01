@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEC</title>
+    <script src="{{url_for('static',filename='JS/global.js')}}"></script>
+</head>
+<body>
+    <h1>Edición de Edificios</h1>
+    <form action="/edificios/modificar" method="post">
+        <label>ID:</label>
+        <input type="number" name="id" value="{{edificio.idEdificio}}" readonly>
+        <br>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required value="{{edificio.nombre}}">
+        <br>
+        <input type="submit" value="Guardar">
+        <button onclick="regresar('edificios')">Cancelar</button>
+    </form>
+</body>
+</html>

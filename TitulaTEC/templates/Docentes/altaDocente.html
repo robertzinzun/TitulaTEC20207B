@@ -3,15 +3,15 @@
     <HEAD>
         <title>TitulaTEC</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../CSS/estilo.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/estilo.css')}}">
         <style>
             h1{
                 color:red;
             }
         </style>
-        <script src="../JS/docentes.js"></script>
+        <script src="{{url_for('static',filename='JS/docentes.js')}}"></script>
     </HEAD>
-    <BODY onload="mostrarYOcultarDiv('datosPersonales')">
+    <BODY>
         
         <header>
             <!--
@@ -19,14 +19,14 @@
                 <img src="../Imagenes/logoITESZ.png">
             </center>
             -->
-            <img src="../Imagenes/logo_itesz.jpg" class="ImgHeader">
+            <img src="{{url_for('static',filename='Imagenes/logo_itesz.jpg')}}" class="ImgHeader">
             <h1 class="textoEncabezado">INSTITUTO TECNOLOGICO DE ESTUDIOS SUPERIORES DE ZAMORA</h1>
-            <img class="ImgHeader" src="../Imagenes/logo_educacion.png" width="100px">
+            <img class="ImgHeader" src="{{url_for('static',filename='Imagenes/logo_educacion.png')}}" width="100px">
         </header>
         <nav>
             <ul>
                 <li><a href="#"> Alumnos </a></li> 
-                <li><a href="./consultaDocentes.html"> Docentes </a></li> 
+                <li><a href="/docentes"> Docentes </a></li>
                 <li><a href="#">Actos </a></li> 
                 <li><a href="#">Aulas </a></li> 
                 <li style="float:right"><a href="#">Edificios </a></li> 
@@ -35,14 +35,14 @@
         <main>
             <section>
                <h1>Registro de Docentes</h1>
-               <form action="#" method="POST" enctype="text/plain" onsubmit="return validar(this);">
+               <form action="/docentes/save" method="post" onsubmit="return validar(this)">
                 <div id="datosPersonales">
                     <fieldset>
                         <legend>
                             Datos Personales
                         </legend>
                         <label>Nombre:</label>
-                        <input type="text" placeholder="Nombre del Docente" name="nombre" maxlength="100" required>
+                        <input type="text" placeholder="Nombre del Docente"  name="nombre" maxlength="100" required>
                         <br>
                         <label>Sexo:</label>
                         <!--<select>
@@ -125,13 +125,13 @@
 
                             </div>
                            <button onclick="mostrarYOcultarDiv('datosPersonales')">Atras</button>
-                           <button type="submit">Guardar</button>
+                           <input type="submit" value="Guardar">
                            <button>Cancelar</button>
                     </fieldset>
                 </div>
                </form>
                 <p>{{msg}}</p>
-              <a href="consultaDocentes.html" class="linkButton">Regresar</a>  
+              <a href="/docentes" class="linkButton">Regresar</a>
               <a href="eliminarDocente.html" class="linkButton">Eliminar</a>
             </section>
             <aside>
@@ -140,7 +140,7 @@
         </main>
         <footer>
             <hr>
-            <img src="../Imagenes/logoACC.png" class="imgFooter">
+            <img src="{{url_for('static',filename='Imagenes/logoACC.png')}}" class="imgFooter">
             <h1 class="textoFooter">
                 &copy;Derechos reservados ITESZ 
             </h1>
