@@ -101,6 +101,17 @@ def consultarSalas():
     s=Sala()
     salas=s.consultaGeneral()
     return  render_template('Salas/ConsultaSala.html',salas=salas)
+@app.route('/salas/new')
+def nuevaSala():
+    e=Edificio()
+    return render_template('Salas/altaSala.html',edificios=e.consultaGeneral())
+@app.route('/salas/save',methods=['POST'])
+def guardarSala():
+    s=Sala()
+    s.nombre=request.form['nombre']
+    s.idEdificio=request.form['idEdificio']
+    s.insertar()
+    return redirect(url_for('consultarSalas'))
 #fin de CRUD salas
 #CRUD Alumnos
 @app.route('/alumnos')

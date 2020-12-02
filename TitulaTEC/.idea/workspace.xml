@@ -4,36 +4,6 @@
     <list default="true" id="1add95b5-851e-41c7-a2d1-e45aab8305fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Alumnos/ConsultaAlumnos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Alumnos/ConsultaAlumnos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CSS/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/CSS/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/CSS/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/CSS/estilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Docentes/altaDocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Docentes/altaDocente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Docentes/consultaDocentes.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Docentes/consultaDocentes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Docentes/eliminarDocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Docentes/eliminarDocente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Docentes/modificarDocente.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Docentes/modificarDocente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/add.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/add.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/editar.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/editar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/eliminar.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/eliminar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/fondo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/fondo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/inicio.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/inicio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logoACC.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logoACC.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logoITESZ.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logoITESZ.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logoTEC.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logoTEC.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logo_educacion.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logo_educacion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logo_gob.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logo_gob.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logo_itesz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logo_itesz.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logo_tecnm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logo_tecnm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/logotecnm.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/logotecnm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Imagenes/roberto.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/Imagenes/roberto.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/docentes.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/docentes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/miScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/miScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/opciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/opciones.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/opcionesGUI.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/opcionesGUI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/JS/opciones_ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/opciones_ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Salas/ConsultaSala.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Salas/ConsultaSala.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +13,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="436">
+              <caret line="113" column="43" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Salas/altaSala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelo/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -60,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Salas/ConsultaSala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="816">
               <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
             </state>
           </provider>
@@ -97,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/templates/Edificios/consultaGeneral.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
+              <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -106,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/templates/Edificios/nuevoEdificio.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -114,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="1387">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -152,12 +134,13 @@
         <option value="$PROJECT_DIR$/templates/Edificios/nuevoEdificio.html" />
         <option value="$PROJECT_DIR$/templates/Salas/ConsultaSala.html" />
         <option value="$PROJECT_DIR$/templates/Alumnos/ConsultaAlumnos.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/modelo/models.py" />
+        <option value="$PROJECT_DIR$/templates/Salas/altaSala.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="824" />
@@ -168,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,10 +173,17 @@
               <item name="TitulaTEC" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TitulaTEC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TitulaTEC" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Salas" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,14 +249,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24947146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.9506347" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.950565" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,48 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Edificios/consultaGeneral.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/JS/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Edificios/nuevoEdificio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Edificios/editarEdificio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Salas/ConsultaSala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Alumnos/ConsultaAlumnos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/sqlalchemy/util/compat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -416,25 +364,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modelo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Salas/ConsultaSala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/JS/global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Alumnos/ConsultaAlumnos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Edificios/editarEdificio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Edificios/consultaGeneral.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Edificios/nuevoEdificio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modelo/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="1387">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/Salas/altaSala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="336">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="113" column="43" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

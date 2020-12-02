@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Registro de Salas</h1>
+    <form action="/salas/save" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <label>Edificio:</label>
+        <select name="idEdificio">
+            {% for e in edificios %}
+                <option value="{{e.idEdificio}}">{{e.nombre}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Guardar">
+        <button onclick="regresar('salas')">Cancelar</button>
+    </form>
+</body>
+</html>
