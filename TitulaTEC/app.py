@@ -1,24 +1,38 @@
 from flask import Flask,render_template,abort,request,redirect,url_for
+from flask_login import LoginManager, login_user
 from flask_sqlalchemy import SQLAlchemy
-from modelo.models import db, Edificio, Sala, Alumno
+from modelo.models import db, Edificio, Sala, Alumno, Usuario
 
 app=Flask(__name__)
+app.secret_key='TitulaT3C'
 app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://titulatec_user:hola.123@localhost/Titulatec2020'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-#db=SQLAlchemy(app)
+#Configuración para el manejo de la sesion de los usuarios
+loginManager=LoginManager()
+loginManager.init_app(app)
+loginManager.login_view="login"
+
+@loginManager.user_loader
+def load_user(id):
+    return Usuario.query.get(int(id))
+
 @app.route('/')
 def inicio():
-    #return '<b>Hola mundo</b>' \
-    #       '<br>' \
-    #       '<button>Saludar</button>';
     return render_template('index.html')
+
 @app.route('/otraRuta')
 def otra_ruta():
     return 'Otra cosa'
 
-@app.route('/login')
+@app.route('/login',methods=['POST'])
 def login():
-    return 'procesando credenciales'
+    u=Usuario()
+    u=u.validar(request.form['email'],request.form['password'])
+    if u!=None:
+        login_user(u)
+        return render_template('Comunes/principal.html')
+    else:
+        return 'Usuario invalido'
 
 @app.route('/alumno/<string:nocontrol>')# Eliminar al alumno
 @app.route('/alumno')# Agregar un alumno con los datos que vendrian en el mensaje de la peticion POST
@@ -119,6 +133,22 @@ def cosultarAlumnos():
     a=Alumno()
     return render_template('Alumnos/ConsultaAlumnos.html',alumnos=a.consultaGeneral())
 
+@app.route('/usuarios/registrar')
+def registrarUsuario():
+    return render_template('Usuarios/registrarUsuario.html')
+@app.route('/usuarios/guardar',methods=['post'])
+def guardarUsuario():
+    u=Usuario()
+    u.nombre=request.form['nombre']
+    print(request.form['sexo'])
+    u.sexo = request.form['sexo']
+    u.telefono = request.form['telefono']
+    u.email=request.form['email']
+    u.password = request.form['password']
+    u.tipo = request.form['tipo']
+    u.estatus = request.form['estatus']
+    u.insertar()
+    return redirect(url_for("inicio"))
 @app.errorhandler(404)
 def error_404(e):
     return render_template('Comunes/error.html',mensaje='Error'),404

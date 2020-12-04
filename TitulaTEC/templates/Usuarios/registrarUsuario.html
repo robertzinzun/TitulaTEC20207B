@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TitulaTEc</title>
+</head>
+<body>
+    <h1>Registro de usuarios</h1>
+    <form action="/usuarios/guardar" method="post">
+        <label>Nombre:</label>
+        <input type="text" placeholder="Nombre"  name="nombre" maxlength="100" required>
+        <br>
+        <label>Sexo:</label>
+        <input type="radio" checked name="sexo" value="F">Femenino
+        <input type="radio" name="sexo" value="M">Masculino
+        <br>
+        <label>Telefono:</label>
+        <input type="tel" name="telefono" placeholder="###-###-####" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email"  placeholder="algo@algo" required>
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <label>Tipo</label>
+        <input type="text" name="tipo" value="A">
+        <br>
+        <label>Estatus:</label>
+        <input type="text" name="estatus" value="A">
+        <br>
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>

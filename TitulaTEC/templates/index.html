@@ -3,13 +3,23 @@
     <head>
         <title>TecZamora</title>
         <meta charset="utf-8">
+        <script src="{{url_for('static',filename='JS/global.js')}}"></script>
     </head>
     <body>
         <h1>TECNOLOGICO DE ZAMORA</h1>
-        <ul>
-            <li><a href="./oferta_academica.html">Oferta Educativa</a></li>
-            <li><a href="/Users/roberto/Documents/GitHub/TitulaTEC20207B/templates/becas.html">Información de Becas</a></li>
-            <li>Lineamientos</li>
-        </ul>
+        <form action="/login" method="post">
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            <br>
+            <label>Password:</label>
+            <input type="password" name="password" id="password">
+            <div id="divP">
+            </div>
+            <input type="checkbox" onchange="verPassword()" id="check">Ver Contraseña
+            <br>
+            <input type="submit" value="Validar">
+            <button>Cancelar</button>
+            <a href="/usuarios/registrar">Regristrarme</a>
+        </form>
     </body>
-</html
+</html>
