@@ -186,3 +186,25 @@ class Administrativo(db.Model):
     def consultaIndividual(self):
         return self.query.get(self.noEmpleado)
 
+class Opcion(db.Model):
+    __tablename__='Opciones'
+    idOpcion=Column(Integer,primary_key=True)
+    nombre=Column(String,unique=True)
+    descripcion=Column(String)
+    def insertar(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def consultaGeneral(self):
+        return self.query.all()
+
+    def actualizar(self):
+        db.session.merge(self)
+        db.session.commit()
+
+    def eliminar(self):
+        db.session.delete(self.consultaIndividual())
+        db.session.commit()
+
+    def consultaIndividual(self):
+        return self.query.get(self.idOpcion)

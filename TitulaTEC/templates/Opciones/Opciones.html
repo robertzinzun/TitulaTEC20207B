@@ -1,8 +1,7 @@
 <html>
     <head>
         <title>CRUD de Opciones</title>
-        <script src="../JS/opciones.js"></script>
-        <script src="../JS/opcionesGUI.js"></script>
+        <script src="{{url_for('static',filename='JS/opcionesGUI.js')}}"></script>
     </head>
     <body onload="inicializarDivs()">
         <div id="listadoGeneral">
@@ -18,7 +17,7 @@
         </div>
         <div id="listadoIndividual">
             <div id="titulo"></div>
-            <label>ID:</label>
+            <label id="etID">ID:</label>
             <input type="number" name="id" id="id" required>
             <br>
             <label>Nombre:</label>

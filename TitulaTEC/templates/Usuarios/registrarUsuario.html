@@ -3,8 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>TitulaTEc</title>
+    <script>
+        function ocultarDivs(){
+            document.getElementById("admin").style.display='none';
+            document.getElementById("alumno").style.display='none';
+        }
+        function verificarTipo(){
+            var tipo=document.getElementById("tipo").options[document.getElementById("tipo").options.selectedIndex].value;
+            alert(tipo);
+            switch(tipo){
+                case 'A':
+                    document.getElementById("admin").style.display='block';
+                    break;
+                case 'E':
+                    document.getElementById("alumno").style.display='block';
+                    break;
+            }
+
+
+        }
+    </script>
 </head>
-<body>
+<body onload="ocultarDivs()">
     <h1>Registro de usuarios</h1>
     <form action="/usuarios/guardar" method="post">
         <label>Nombre:</label>
@@ -24,12 +44,28 @@
         <input type="password" name="password" required>
         <br>
         <label>Tipo</label>
-        <input type="text" name="tipo" value="A">
+        <select name="tipo" onchange="verificarTipo()" id="tipo">
+            <option selected>--Selecciona el tipo --</option>
+            <option value="A">Administrativo</option>
+            <option value="E">Alumno</option>
+            <option value="D">Docente</option>
+        </select>
         <br>
         <label>Estatus:</label>
-        <input type="text" name="estatus" value="A">
+        <input type="checkbox" name="estatus" value="A" checked>
         <br>
+        <div id="admin">
+            <h1>Datos del Empleado</h1>
+            <label>No Empleado:</label>
+            <input type="number" name="noEmpleado">
+        </div>
+        <div id="alumno">
+            <h1>Datos del Alumno</h1>
+            <label>No Control:</label>
+            <input type="niumber" name="noControl">
+        </div>
         <input type="submit" value="Registrar">
+        <a href="/">Regresar</a>
     </form>
 </body>
 </html>

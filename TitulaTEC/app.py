@@ -1,7 +1,8 @@
 from flask import Flask,render_template,abort,request,redirect,url_for
-from flask_login import LoginManager, login_user
+from flask_login import LoginManager, login_user, current_user, logout_user, login_required
 from flask_sqlalchemy import SQLAlchemy
-from modelo.models import db, Edificio, Sala, Alumno, Usuario
+from modelo.models import db, Edificio, Sala, Alumno, Usuario, Opcion
+import json
 
 app=Flask(__name__)
 app.secret_key='TitulaT3C'
@@ -10,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 #Configuración para el manejo de la sesion de los usuarios
 loginManager=LoginManager()
 loginManager.init_app(app)
-loginManager.login_view="login"
+loginManager.login_view="inicio"
 
 @loginManager.user_loader
 def load_user(id):
@@ -18,7 +19,10 @@ def load_user(id):
 
 @app.route('/')
 def inicio():
-    return render_template('index.html')
+    if current_user.is_authenticated:
+        return render_template('Comunes/principal.html')
+    else:
+        return render_template('index.html')
 
 @app.route('/otraRuta')
 def otra_ruta():
@@ -29,10 +33,20 @@ def login():
     u=Usuario()
     u=u.validar(request.form['email'],request.form['password'])
     if u!=None:
+        print(u.getTipo())
         login_user(u)
         return render_template('Comunes/principal.html')
     else:
         return 'Usuario invalido'
+
+@app.route('/cerrarSesion')
+@login_required
+def cerrarSesion():
+    if current_user.is_authenticated:
+        logout_user()
+        return redirect(url_for("inicio"))
+    else:
+        abort(404)
 
 @app.route('/alumno/<string:nocontrol>')# Eliminar al alumno
 @app.route('/alumno')# Agregar un alumno con los datos que vendrian en el mensaje de la peticion POST
@@ -73,8 +87,12 @@ def guardarDocente():
 #fin del CRUD de la tabla Docentes
 #inicio del crud de Edificios
 @app.route('/edificios/new')
+@login_required
 def nuevoEdificio():
-    return render_template('Edificios/nuevoEdificio.html')
+    if current_user.is_admin():
+        return render_template('Edificios/nuevoEdificio.html')
+    else:
+        abort(404)
 @app.route('/edificios/save',methods=['POST'])
 def guardarEdificio():
     try:
@@ -85,17 +103,20 @@ def guardarEdificio():
     except:
         abort(500)
 @app.route('/edificios')
+@login_required
 def consultaGeneralEdificios():
     edificio = Edificio()
     edificios=edificio.consultaGeneral()
     return render_template('Edificios/consultaGeneral.html',edificios=edificios)
 @app.route('/edificios/<int:id>')
+@login_required
 def consultarEdificio(id):
     edificio=Edificio()
     edificio.idEdificio=id
     edificio=edificio.consultaIndividual()
     return render_template('Edificios/editarEdificio.html',edificio=edificio)
 @app.route('/edificios/modificar',methods=['POST'])
+@login_required
 def actualizarEdificio():
     edificio=Edificio()
     edificio.idEdificio=request.form['id']
@@ -103,6 +124,7 @@ def actualizarEdificio():
     edificio.actualizar()
     return redirect(url_for('consultaGeneralEdificios'))
 @app.route('/edificios/delete/<int:id>')
+@login_required
 def eliminarEdificio(id):
     edificio=Edificio()
     edificio.idEdificio=id
@@ -116,10 +138,12 @@ def consultarSalas():
     salas=s.consultaGeneral()
     return  render_template('Salas/ConsultaSala.html',salas=salas)
 @app.route('/salas/new')
+@login_required
 def nuevaSala():
     e=Edificio()
     return render_template('Salas/altaSala.html',edificios=e.consultaGeneral())
 @app.route('/salas/save',methods=['POST'])
+@login_required
 def guardarSala():
     s=Sala()
     s.nombre=request.form['nombre']
@@ -140,7 +164,6 @@ def registrarUsuario():
 def guardarUsuario():
     u=Usuario()
     u.nombre=request.form['nombre']
-    print(request.form['sexo'])
     u.sexo = request.form['sexo']
     u.telefono = request.form['telefono']
     u.email=request.form['email']
@@ -149,6 +172,48 @@ def guardarUsuario():
     u.estatus = request.form['estatus']
     u.insertar()
     return redirect(url_for("inicio"))
+#CRUD Opciones (Ajax)
+@app.route("/opciones")
+def opciones():
+    return render_template('Opciones/Opciones.html')
+
+@app.route('/opciones/consultaGeneral')
+def consultarOpciones():
+    opcion=Opcion()
+    lista=[]
+    for o in opcion.consultaGeneral():
+        lista.append({"idOpcion":o.idOpcion,"nombre":o.nombre,"descripcion":o.descripcion})
+    return json.dumps(lista)
+@app.route('/opciones/guardar/<data>',methods=['get'])
+def guaradarOpcion(data):
+    opcion=Opcion()
+    datos=json.loads(data)
+    opcion.nombre=datos['nombre']
+    opcion.descripcion=datos['descripcion']
+    opcion.insertar()
+    return 'Opcion agregada con exito'
+@app.route('/opciones/<int:id>')
+def consultarOpcion(id):
+    opcion=Opcion()
+    opcion.idOpcion=id
+    opcion=opcion.consultaIndividual()
+    dicOpcion={"idOpcion":opcion.idOpcion,"nombre":opcion.nombre,"descripcion":opcion.descripcion}
+    return json.dumps(dicOpcion)
+@app.route('/opciones/modificar/<data>',methods=['get'])
+def modifcarOpcion(data):
+    opcion = Opcion()
+    datos = json.loads(data)
+    opcion.idOpcion=datos['idOpcion']
+    opcion.nombre = datos['nombre']
+    opcion.descripcion = datos['descripcion']
+    opcion.actualizar()
+    return 'Opcion modificada con exito'
+@app.route('/opciones/delete/<int:id>')
+def eliminarOpcion(id):
+    opcion = Opcion()
+    opcion.idOpcion=id
+    opcion.eliminar()
+    return 'Opcion eliminada con exito'
 @app.errorhandler(404)
 def error_404(e):
     return render_template('Comunes/error.html',mensaje='Error'),404

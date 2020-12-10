@@ -2,10 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TitulaTEC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Bienvenido {{current_user.nombre}} al sistema de Titulación Integral del ITESZ</h1>
 
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Logo</a>
+
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/edificios">Edificios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/salas">Salas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/cerrarSesion">Cerrar Sesión</a>
+        </li>
+        {% if current_user.is_authenticated and current_user.getTipo()!='A'  %}
+        <li class="nav-item">
+                <a class="nav-link" href="/solicitudes">Solicitudes</a>
+        </li>
+        {% endif %}
+
+        <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Catalogos
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/edificios">Edificios</a>
+        <a class="dropdown-item" href="/salas">Salas</a>
+        <a class="dropdown-item" href="/opciones">Opciones</a>
+        <a class="dropdown-item" href="/opciones">Carreras</a>
+      </div>
+    </li>
+                  <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+        Usuarios
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/edificios">Administrativos</a>
+        <a class="dropdown-item" href="/salas">Alumnos</a>
+        <a class="dropdown-item" href="/opciones">Docentes</a>
+      </div>
+    </li>
+          <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop3" data-toggle="dropdown">
+        Titulación Integral
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/edificios">Solicitudes</a>
+        <a class="dropdown-item" href="/salas">Actos</a>
+        <a class="dropdown-item" href="/opciones">Pagos</a>
+      </div>
+    </li>
+      </ul>
+
+    </nav>
+    <h1>Bienvenido <b>{{current_user.nombre}}</b> al sistema de Titulación Integral del ITESZ</h1>
+    <img src="{{url_for('static',filename='Imagenes/fondo.jpg')}}">
 </body>
 </html>

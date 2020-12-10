@@ -24,41 +24,57 @@ function realizarOperacion(){
     var obj;
     switch(op){
         case "c":
-            obj=new Opcion(document.getElementById("id").value,
-                document.getElementById("nombre").value,
-                document.getElementById("descripcion").value,
-            );
-            obj.guardar();
-            document.getElementById("notificaciones").innerHTML="Opción creada con exito";
-            inicializarDivs();
+            obj={nombre:document.getElementById("nombre").value,descripcion:document.getElementById("descripcion").value};
+            json=JSON.stringify(obj);
+
+            var url="/opciones/guardar/"+encodeURI(json);
+            lanzarPerticion(url);
             break;
         case "r":
             obj.consultar();
             break;
         case "u":
-            obj=new Opcion(document.getElementById("id").value,
-                document.getElementById("nombre").value,
-                document.getElementById("descripcion").value,
-            );
-            obj.actualizar();   
-            document.getElementById("notificaciones").innerHTML="Opción modificada con exito";     
-            inicializarDivs();
+             obj={idOpcion:document.getElementById("id").value,nombre:document.getElementById("nombre").value,descripcion:document.getElementById("descripcion").value};
+            json=JSON.stringify(obj);
+            var url="/opciones/modificar/"+encodeURI(json);
+            lanzarPerticion(url);
             break;
         case "d":
-            obj=new Opcion(document.getElementById("id").value,
-                document.getElementById("nombre").value,
-                document.getElementById("descripcion").value,
-            );
-            if(confirm('¿Estas seguro de eliminar la opcion:'+obj.getNombre())){
-                obj.eliminar();   
-                document.getElementById("notificaciones").innerHTML="Opción eliminada con exito";     
-                inicializarDivs();
+            var id=document.getElementById("id").value;
+            var nombre=document.getElementById("nombre").value;
+            if(confirm('¿Estas seguro de eliminar la opcion:'+nombre+"?")){
+                var url="/opciones/delete/"+id;
+                lanzarPerticion(url);
             }
             break;
     } 
 }
+function lanzarPerticion(url){
+    var ajax=new XMLHttpRequest();
+    ajax.onreadystatechange=function(){
+        if(this.status==200 && this.readyState==4){
+            alert(this.responseText);
+            inicializarDivs();
+        }
+    };
+    ajax.open("get",url,true);
+    ajax.setRequestHeader("Content-Type","application/json")
+    ajax.send();
+}
 function consultaGeneral(){
     limpiarTabla();
+    var ajax=new XMLHttpRequest();
+    ajax.onreadystatechange=function(){
+        if(this.status==200 && this.readyState==4){
+            llenarTabla(this.responseText);
+        }
+    };
+    ajax.open("Get","/opciones/consultaGeneral",true);
+    //ajax.setRequestHeader("Content-Type","application/json")
+    ajax.send();
+}
+function llenarTabla(respuesta){
+    arrayOpciones=JSON.parse(respuesta);
     if(arrayOpciones.length!=0){
         document.getElementById("notificaciones").innerHTML="";
         var table=document.getElementById("datos");
@@ -72,11 +88,11 @@ function consultaGeneral(){
                 tr.appendChild(td);
             }
             table.appendChild(tr);
-            var link=crearlink(obj.id,"editar");
+            var link=crearlink(obj.idOpcion,"editar");
             var td=document.createElement("td");
             td.appendChild(link);
             tr.appendChild(td);
-            link=crearlink(obj.id,"eliminar");
+            link=crearlink(obj.idOpcion,"eliminar");
             td=document.createElement("td");
             td.appendChild(link);
             tr.appendChild(td);
@@ -90,7 +106,7 @@ function crearlink(id,operacion){
     var link=document.createElement("a");
     link.setAttribute("href","javascript:"+operacion+"("+id+")");
     var img=document.createElement("img");
-    img.setAttribute("src","../Imagenes/"+operacion+".png");
+    img.setAttribute("src","static/Imagenes/"+operacion+".png");
     link.appendChild(img);
     return link;
 }
@@ -100,36 +116,50 @@ function limpiarTabla(){
         table.removeChild(table.rows[i]);
     }
 }
-function editar(id){
-    op="u";
-    var o=new Opcion(id,"","");
-    o=o.consultar();
-    document.getElementById("id").value=o.getId();
-    document.getElementById("nombre").value=o.getNombre();
-    document.getElementById("descripcion").value=o.getDescripcion();
+function llenarCampos(respuesta,operacion){
+    op=operacion;
+    var o=JSON.parse(respuesta);
+    document.getElementById("id").value=o.idOpcion;
+    document.getElementById("nombre").value=o.nombre;
+    document.getElementById("descripcion").value=o.descripcion;
     ocultarDiv("listadoGeneral");
-    document.getElementById("titulo").innerHTML="<h1>Edición de Opciones</h1>";
+    if(operacion=='u')
+        document.getElementById("titulo").innerHTML="<h1>Edición de Opciones</h1>";
+    else
+        document.getElementById("titulo").innerHTML="<h1>Eliminación de Opciones</h1>";
     mostrarDiv("listadoIndividual");
     document.getElementById("id").setAttribute("readonly",true);
-    document.getElementById("eliminar").style.display="none";
+    document.getElementById("etID").style.display="block";
+    document.getElementById("id").style.display="block";
+    document.getElementById("eliminar").style.display="block";
     document.getElementById("guardar").style.display="block";
 }
+function editar(id){
+    var ajax=new XMLHttpRequest();
+    ajax.onreadystatechange=function(){
+        if(this.status==200 && this.readyState==4){
+            llenarCampos(this.responseText,"u");
+        }
+    };
+    ajax.open("get","/opciones/"+id,true);
+    ajax.send();
+}
+
 function eliminar(id){
-    op="d";
-    var o=new Opcion(id,"","");
-    o=o.consultar();
-    document.getElementById("id").value=o.getId();
-    document.getElementById("nombre").value=o.getNombre();
-    document.getElementById("descripcion").value=o.getDescripcion();
-    ocultarDiv("listadoGeneral");
-    document.getElementById("titulo").innerHTML="<h1>Eliminación de Opciones</h1>";
-    document.getElementById("id").setAttribute("readonly",true);
-    mostrarDiv("listadoIndividual");
-    document.getElementById("guardar").style.display="none";
-    document.getElementById("eliminar").style.display="block";
+    var ajax=new XMLHttpRequest();
+    ajax.onreadystatechange=function(){
+        if(this.status==200 && this.readyState==4){
+            llenarCampos(this.responseText,"d");
+        }
+    };
+    ajax.open("get","/opciones/"+id,true);
+    ajax.send();
+
 }
 function reset(){
     document.getElementById("id").value="";
+    document.getElementById("id").style.display="none";
+    document.getElementById("etID").style.display="none";
     document.getElementById("nombre").value="";
     document.getElementById("descripcion").value="";
     document.getElementById("id").removeAttribute("readonly");
